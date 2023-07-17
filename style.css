@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    /*background-color: #759f9b; */
+    background: url(./pexels-karolina-grabowska-4397907.jpg);
+    background-size: cover;
+    background-position: center;
+    color: saddlebrown;
+}
+
+.container{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 4.5px;
+    width: 280px;
+    height: 280px;
+    display: grid;
+    place-items: center;
+}
+
+.container h1{
+    font-size: 22px;
+    margin: 10px 0 30px 0;
+}
+
+.buttons{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.buttons button{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--clr);
+    color: #fff;
+    transition: transform 0.4s ease-in-out;
+    width: 45%;
+    margin-bottom: 10px;
+}
+
+.buttons button:hover{
+    transform: scale(1.1);
+}
+
+.pomoCountsDisplay{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    animation: swipe-up 1s ease-in;
+}
+
+.pomoCountsDisplay span{
+    font-size: 50px;
+    font-weight: 700;
+    color: brown;
+}
+
+.pomoCountsDisplay p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@keyframes swipe-up{
+    0%{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styles for devices with max-width 520px */
+@media screen and (max-width: 520px){
+    .container{
+        width: 90%; /* Adjust the width as per your design */
+    }
+
+    .timer{
+        width: 200px; /* Adjust the width as per your design */
+        height: 200px; /* Adjust the height as per your design */
+        font-size: 36px; /* Adjust the font-size as per your design */
+    }
+
+    .buttons{
+        width: 90%;
+    }
+
+    .buttons button{
+        width: 90%;
+    }
+}
+
+/* Additional media queries for other screen sizes */
+@media screen and (min-width: 521px) and (max-width: 768px){
+    /* Adjust styles for devices with screen width between 521px and 768px */
+    .container{
+        width: 60%; /* Adjust the width as per your design */
+    }
+
+    .buttons button{
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    /* Adjust styles for devices with screen width between 769px and 1024px */
+    .container{
+        width: 40%; /* Adjust the width as per your design */
+    }
+
+    .buttons button{
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    /* Adjust styles for devices with screen width larger than 1024px */
+    .container{
+        width: 30%; /* Adjust the width as per your design */
+    }
+
+    .buttons button{
+        width: 20%;
+    }
+}
